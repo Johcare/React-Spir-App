@@ -27,9 +27,9 @@ import  {sentry_url} from './data/config';
 Raven.config('https://297beb4a54aa4cf5ac7486c5d2381b01@sentry.io/225498').install();
 console.log(window.onload);
 
-Raven.context(function() {
-  initMyApp();
-});
+// Raven.context(function() {
+//   initMyApp();
+// });
 
 
 
