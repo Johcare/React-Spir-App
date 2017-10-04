@@ -3,10 +3,6 @@ import { render } from 'react-dom';
 // Import css
 import css from './styles/style.styl';
 
-
-
-
-
 // Import Components
 import App from './components/App';
 import Single from './components/Single';
