@@ -9,6 +9,7 @@ import css from './styles/style.styl';
 import App from './components/App';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
+import {Submit} from './components/Submit';
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -20,6 +21,7 @@ const router = (
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={PhotoGrid}></IndexRoute>
+        <Route path={"/submit"} component={Submit} />
         <Route path="/view/:postId" component={Single}></Route>
       </Route>
     </Router>
