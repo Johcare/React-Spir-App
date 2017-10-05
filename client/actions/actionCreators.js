@@ -1,8 +1,16 @@
 // increment
+
+
 export function increment(index) {
   return {
     type: 'INCREMENT_LIKES',
     index
+  }
+}
+export function getdata(){
+
+  return {
+    type: 'GET_DATA'
   }
 }
 

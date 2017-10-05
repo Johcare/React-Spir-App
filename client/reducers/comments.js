@@ -1,10 +1,27 @@
 //
+import axios from 'axios';
+
+function getdata(){
+      axios
+        .get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
+        .then(response => response.data)
+        .then(stuuf => {
+          let dataPPics = [];
+          stuuf.data.forEach(function(element) {
+            dataPPics.push(element.images.original_still.url);
+          });
+         return dataPPics;
+        });
+}
+
+
+
 function postComments(state = [], action) {
   switch (action.type) {
     case 'ADD_COMMENT':
       //return the newstate with new comment
 
-      return [...state,{
+      return [...state, {
           user: action.author,
           text: action.comment
         }
